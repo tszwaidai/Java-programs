@@ -3,6 +3,7 @@ package com.bookmanage.bms.service.impl;
 import com.bookmanage.bms.mapper.BorrowMapper;
 import com.bookmanage.bms.entity.Borrow;
 import com.bookmanage.bms.service.BorrowService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,7 +15,7 @@ import java.util.Map;
 @Service
 public class BorrowServiceImpl implements BorrowService {
 
-    @Resource
+    @Autowired
     private BorrowMapper borrowMapper;
 
     @Override

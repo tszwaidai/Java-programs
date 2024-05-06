@@ -17,10 +17,10 @@ public class BookInfoServiceImpl implements BookInfoService {
 
 
 //    @Autowired 按照名称进行注入用resource
-    @Resource
+    @Autowired
     private BookInfoMapper bookInfoMapper;
 
-    @Resource
+    @Autowired
     private BorrowMapper borrowMapper;
 
     @Override

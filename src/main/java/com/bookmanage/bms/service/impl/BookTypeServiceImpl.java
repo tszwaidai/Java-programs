@@ -4,6 +4,7 @@ import com.bookmanage.bms.mapper.BookInfoMapper;
 import com.bookmanage.bms.service.BookTypeService;
 import com.bookmanage.bms.mapper.BookTypeMapper;
 import com.bookmanage.bms.entity.BookType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,10 +15,10 @@ import java.util.Map;
 @Service
 public class BookTypeServiceImpl implements BookTypeService {
 
-    @Resource
+    @Autowired
     private BookTypeMapper bookTypeMapper;
 
-    @Resource
+    @Autowired
     private BookInfoMapper bookInfoMapper;
 
     @Override

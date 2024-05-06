@@ -4,6 +4,7 @@ import com.bookmanage.bms.mapper.BorrowMapper;
 import com.bookmanage.bms.mapper.UserMapper;
 import com.bookmanage.bms.entity.User;
 import com.bookmanage.bms.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Service;
@@ -17,13 +18,13 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Resource
+    @Autowired
     private UserMapper userMapper;
 
-    @Resource
+    @Autowired
     private RedisTemplate<Object, Object> redisTemplate; //redis相关操作
 
-    @Resource
+    @Autowired
     private BorrowMapper borrowMapper;
 
     @Override
